@@ -1,0 +1,282 @@
+
+body {
+    background: url("../assets/crew/background-crew-desktop.jpg") no-repeat;
+    background-repeat: no-repeat;  
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;  
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+}
+
+.crew {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.crew-col {
+    width: 60%;
+}
+
+.designation,
+.crew__member--name {
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+}
+
+.designation {
+    font-size: 32px;
+    color: #979797;
+    margin: 1.7em 0 .625em 0
+}
+
+.crew__member--name {
+    font-size: 56px;
+    margin-bottom: .425em;
+}
+
+.crew__text-rg {
+    font-size: 18px;
+    color: #D0D6F9;
+    line-height: 1.6;
+    margin-bottom: 2em;
+    width: 70%;
+}
+
+.crew__img-wrap {
+    position: relative; 
+}
+
+.crew_img {
+    border-bottom: 1px solid rgba(151,151,151,.2);
+}
+
+.crew_img.commander {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    transform: scale(90%);
+}
+
+.crew_img.specialist,
+.crew_img.pilot {
+    position: absolute;
+    right: 0;
+    top: -80px;
+}
+
+.crew_img.engr{
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transform: scale(90%);
+}
+
+.crew-nav {
+    position: relative;
+}
+
+.crew__list {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    position: absolute;
+    bottom: 10%;
+}
+
+.crew__list--item {
+    background-color: #979797;
+    border-radius: 70%;
+    transform: scale(70%)
+}
+
+.crew__list--item + .crew__list--item {
+   margin-left: 1.325em;
+}
+
+.crew__list--item:hover {
+    background-color: rgba(255,255,255,.7);
+}
+
+.crew__list--link {
+    padding: 10px;
+    transform: scale(30%)
+}
+
+.crew__list .active {
+    border: none;
+    background-color: #fff;
+}
+.destination__text {
+   padding-right: 2em;
+}
+
+@media (max-width:1400px) {
+    body {
+        height: 100vh;
+    }
+}
+
+@media (max-width:1100px) {
+    body {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100%;
+    }
+
+    .crew {
+        flex-flow: column;
+        align-items: center;
+    }
+ 
+    .crew-col {
+        width: 100%;
+    }
+
+    .crew__img-wrap {
+        display: flex;
+        justify-content: center;
+        width: 434px;
+        height: 532px;
+        border-bottom: 1px solid rgba(151,151,151,.2);
+    }
+
+    .crew__img-wrap {
+        margin-top: 2em;
+    }
+
+    .crew_img {
+        position: static;
+    }
+
+    .destination__text {
+        text-align: center;
+    }
+
+    .designation {
+        font-size: 24px;
+        margin-top: 1em;
+    }
+
+    .crew__member--name {
+        font-size: 40px;
+    }
+
+    .crew__text-rg {
+        font-size: 16px;
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .crew__list {
+        position: static;
+        justify-content: center;
+        margin: 2em 0;
+    }
+    
+    .crew_img.commander,
+    .crew_img.specialist,
+    .crew_img.pilot,
+    .crew_img.engr {
+        position: static;
+        transform: none;
+        /* transform: scale(70%); */
+    }
+    
+
+}
+
+@media (max-width:640px) {
+
+    body {
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .crew {
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+
+    .crew-col {
+        width: 100%;
+    }
+
+    .crew__img-wrap {
+        display: flex;
+        justify-content: center;
+        width: 327px;
+        height: 223px;
+        border-bottom: 1px solid rgba(151,151,151,.2);
+    }
+
+    .crew_img {
+        position: static;
+        width: 60%;
+    }
+
+    .designation {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .crew__member--name {
+        font-size: 24px;
+    }
+
+    .destination__text {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .crew-nav {
+        order: -1;
+    }
+
+    .crew__text-rg {
+        width: 100%;
+    }
+
+    .crew__list {
+        position: static;
+        justify-content: center;
+        margin: 2em 0;
+    }
+}
+
+@media (max-width:375px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+ 
+}
+
+@media (max-width:320px) {
+    body {
+        background-size: cover;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+ 
+}

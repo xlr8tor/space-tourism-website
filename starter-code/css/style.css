@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+:root {
+    font-size: 1rem;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;  
+    background-size: cover;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;  
+}
+
+header {
+    margin-top: 40px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+hr {
+    display: none;
+    position: absolute;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: none;
+    opacity: .4;
+    width: 500px;
+    left: 170px;
+    z-index: 10;
+}
+
+.logo {
+    margin-left: 3em;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    background-color: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(16px);
+    list-style: none;
+    text-transform: uppercase;
+    padding: 3px 9.5em 0 6.5em;  
+}
+
+.list__item {
+    border-bottom: 3px solid transparent;
+}
+
+.list__item:hover {
+    border-bottom: 3px solid #fff;
+}   
+
+.list__item + .list__item {
+    margin-left: 3em;
+}
+
+.list__link {
+    line-height: 5;
+    letter-spacing: 2.35px;
+    padding: 20px 0;
+}
+
+.active {
+    border-bottom: 3px solid #fff;
+}
+
+.number {
+    margin-right: .525em;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1100px;
+    padding: 22vh 0;
+    margin: 0 auto;
+}
+
+.col {
+    width: 40%;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.explore {
+    background-color: #fff;
+    color: #0B0D17;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    width: 272px;
+    line-height: 272px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
+    
+}
+
+.big-circle {
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    bottom: -60px;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+}
+
+.explore:hover {
+    cursor: pointer;
+}
+
+.explore:hover + .big-circle{
+    visibility: visible;  
+    opacity: .2;
+    transform: scale(100%);
+    /* transition: all .3s ease-in-out; */
+}
+
+
+.space {
+    display: block;
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+    text-transform: uppercase;
+    margin: 1rem 0 1.7rem 0;
+}
+
+.space-header {
+    font-size: 28px;
+    color: #D0D6F9;
+    text-transform: uppercase;
+    letter-spacing: 4.75px;
+}
+
+.space-text {
+    color: #D0D6F9;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+
+#check {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.container-bg {
+    opacity: 0;
+    margin-top: 150px;
+    animation: slidefade 1s ease-out 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@media (min-width:1100px) {
+
+    hr {
+        display: inline-block;
+    }
+}
+
+@media (max-width:1100px) {
+    body {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100%;
+    }
+    header {
+        margin-top: 0;
+    }
+
+    .logo {
+        margin-left: 1.3em;
+    }
+
+    .home-content {
+        flex-flow: column nowrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 8vh auto;
+    }
+
+    .list {
+        padding: 3px 2em 0 3em;  
+    }
+
+    .space-text {
+        font-size: 16px;
+        width: 63%;
+        margin: 0 auto;
+    }
+
+    .space {
+        margin: .7rem 0 1rem 0;
+    }
+
+    .space-header {
+        font-size: 20px;
+    }
+
+   .col {
+       width: auto;
+       margin: 0 auto;
+   }
+    .number {
+        display: none;
+    }
+
+    .explore {
+        width: 242px;
+        line-height: 242px;
+        margin-top: 3em;
+    }
+
+    .big-circle {
+        width: 300px;
+        height: 300px;
+        bottom: -29px;
+    }
+    
+
+}
+
+@media (max-width:600px) {
+    body {
+        background-image: url("../assets/home/background-home-mobile.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100%;
+    }
+
+    .close {
+        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 13;
+        margin-right: 1.3em;
+    }
+
+    .list {
+        height: 100%;  
+        max-height: -webkit-fill-available;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        flex-flow: column nowrap;
+        z-index: 12;
+        padding: 8em 0 0 0;
+    }
+
+    
+    #check:checked ~ .list {
+        right: 0;
+    }
+
+    #check:checked  ~ label .close {
+        display: inline;
+    }
+
+    #check:checked  ~ label .hamburger{
+        display: none;
+    }
+
+    .list__item {
+        line-height: 3;
+        border-bottom: 0;
+        border-right: 3px solid transparent;
+        margin-left: 3em;
+        padding-right: 4em;
+    }
+    
+    .list__item:hover {
+        border-bottom: 0;
+        border-right: 3px solid #fff;
+    }  
+       
+    .active {
+        border-bottom: none;
+        border-right: 3px solid #fff;
+    }
+
+    .hamburger {
+        display: inline;
+        margin-right: 1.3em;
+        padding-top: 1.5em;
+    }
+
+    .logo {
+        transform: scale(70%);
+        padding-top: 1.5em;
+    }
+
+    .active {
+        border-bottom: none;
+        border-right: 3px solid #fff;
+    }
+
+    .number {
+        display: inline-block;
+    }
+    .space {
+        font-size: 80px;
+    }
+
+    .space-header {
+        font-size: 16px;
+    }
+
+    .space-text {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .explore {
+        margin-top: 3em;
+    }
+
+   
+}
+
+@media (max-width:375px) {
+    body {
+        background-size: cover;
+        height: 100%;
+    }
+    .home-content {
+        margin: 5vh auto;
+    }
+
+    .space {
+        margin: .4rem 0 .5rem 0;
+    }
+
+    .space-header {
+        letter-spacing: 1px;
+    }
+
+    .explore {
+        font-size: 20px;
+        margin-top: 3em;
+        width: 130px;
+        line-height: 130px;
+    }
+}

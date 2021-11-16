@@ -1,0 +1,238 @@
+
+body {
+    background: url("../assets/technology/background-technology-desktop.jpg") no-repeat;
+    background-repeat: no-repeat;  
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;  
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%; 
+}
+
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 0 2em 11em;
+    /* overflow: hidden; */
+}
+
+.tech {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-width: 1500px;
+    position: relative;
+}
+
+/* .tech__img {
+    width: clamp(15rem,100%,100%);
+}
+
+.tech__img img {
+    
+} */
+
+.tech__img .mobile {
+    display: none;
+}
+
+.tech-header {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+}
+
+.tech__text {
+    display: flex;
+    padding-bottom: 3em;
+}
+
+.tech__text-bg {
+    display: block;
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    text-transform: uppercase;
+    margin: .325em 0 .425em 0;
+}
+
+.tech__text-rg {
+    width: 70%;
+    font-size: 18px;
+    color: #D0D6F9;
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+
+.tech-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    margin-right: 2em;
+}
+
+.tech-nav__item  + .tech-nav__item {
+    margin-top: 1em;
+}
+
+.tech-nav__link{
+    display: flex;
+    align-items: center;   
+}
+
+.link-num {
+    width: 80px;
+    line-height: 80px;
+    border: 1px solid #979797;;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.link-num:hover {
+    border: 1px solid #fff;
+}
+
+.link-num.active {
+    background-color: #fff;
+    color: #0B0D17 !important;
+}
+
+@media (max-width:1100px) {
+    body {
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100vh;
+    }
+
+    .tech-container {
+        padding: 0;
+    }
+    .tech {
+        flex-flow: column-reverse nowrap;
+    }
+
+    .tech__img {
+        width: 100%;
+    }
+
+    .tech__img img {
+        display: none;
+    }
+
+    .tech__img .mobile{
+        display: block;
+        width: 100%;
+        height: 350px;
+    }
+
+    .tech__text {
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+
+    .tech-nav {
+        flex-flow: row;
+        margin: 2em 0;
+    }
+
+    .tech-nav__item + .tech-nav__item {
+        margin: 0 0 0 .8em;
+    }
+
+    .tech__text-bg {
+        font-size: 40px;
+    }
+
+    .tech__text-rg {
+        font-size: 16px;
+        width: 80%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .link-num {
+        width: 56px;
+        line-height: 56px;
+    }
+
+}
+
+@media (max-width:640px) {
+
+    body {
+        background-image: url("../assets/technology/background-technology-mobile.jpg");
+        background-repeat: no-repeat;  
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .tech-nav {
+        font-size: 16px;
+        margin: 1.8em 0;
+    }
+
+    .tech-header {
+        font-size: 14px;
+        letter-spacing: 2.36px;
+    }
+
+    .tech__text {
+        padding-bottom: 1em;
+    }
+
+    .tech__text-bg {
+        font-size: 24px;
+        margin-top: .6em;
+    }
+
+    .tech__text-rg {
+        font-size: 15px;
+       
+    }
+
+    .tech__img .mobile{
+        height: auto;
+    }
+
+    .link-num {
+        width: 40px;
+        line-height: 40px;
+    }
+}
+
+
+
+@media (max-width:375px) {
+    body {
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100vh;
+    }
+ 
+}
+
+@media (max-width:320px) {
+    body {
+        background-size: cover;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+ 
+}
