@@ -60,6 +60,7 @@ hr {
     display: flex;
     background-color: rgba(255, 255, 255, .05);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     list-style: none;
     text-transform: uppercase;
     padding: 3px 9.5em 0 6.5em;  
